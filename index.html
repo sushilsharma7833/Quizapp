@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <title>Quiz App</title>
+</head>
+<body> 
+  <h6>Made By -  Sushil navhal</h6>
+     <!--home page start here-->
+     <!-- user details section starts here -->
+    <div class="inform-box">
+        <div class="heading">
+            <h2>Welcome to Quiz App.</h2>
+        </div>
+        <div class="rules">
+            <p>1. There are only 10 questions.</p>
+            <p>2. You will have a <span>30 seconds</span> per each question.</p>
+            <p>3. Once you select your answer ,it can't be undone.</p>
+            <p>4. You  can't select any option once it goes off.</p>
+            <p>5. You can't exit from the Quiz while you're playing.</p>
+            <p>6. You'll get option on the basis of your correct answer.</p>
+
+            <div class="btn">
+                <button id="continue" type="button" >Continue</button>
+            </div>
+        </div>
+    </div>
+     <!-- information box section ends here -->
+
+
+     <!-- category section starts here -->
+     <div class="categ-box">
+        <div class="user_registration">
+          <!-- logo added here -->
+          <img src="./Testbook.png" alt="Testbook Logo" />
+            <!-- heading tag add here  -->
+          <h1>Hello User!</h1>
+          <h5>Enter your name to continue the Quiz.</h5>
+          <!-- user name input section   -->
+          <div class="user_info">
+              <div class="input_group">
+                <input
+                  type="text"
+                  placeholder="ENTER YOUR NAME"
+                  required
+                  id="user_name"
+                  name="user_name"
+                />
+                <button id="form_submit" onclick="printname()">Enter</button>
+            </div>
+            <div>
+            <div id="displayname"></div>
+            <h4> You'll have 300 seconds to answer all question</h4>
+          </div>
+          </div>
+          <!-- category added here -->
+          <div class="categories_info">
+            <h1>Select Category</h1>
+            <div class="categories">
+              <span id="pc">Pipes and Cisterns</span>
+              <span id="pb">Probability</span>
+              <span id="pa">Problems On Ages</span>
+              <span id="pl">Profits And Losses</span>
+            </div>
+          </div>
+        <button id="reset_category">Back </button>
+      </div>
+    </div>
+    <!-- categories section ends here -->
+    <!--home page end here-->
+
+    <!---Quiz page starts here -->
+    <div class="Question-box"  id="display">
+      <!-- titles on webpage it will be displayed -->
+        <div class="title-bar">
+            PROBABILITY
+        </div>
+        <!-- score and timer section added here -->
+        <div class="score-timer">
+            <div id="timer"> 00</div>
+            <div id="score">score: 0  </div>
+        </div>
+        <fieldset>
+            <legend class="qcount">0/10
+              <!-- <span></span> -->
+            </legend>   
+             <div class="question">
+            </div>
+          </fieldset>
+          <!-- Answer options starts here -->
+          <div class="answer-options">
+            <span type="button" class="option">Ans1</span>
+            <span type="button" class="option">Ans2</span>
+            <span type="button" class="option">Ans3</span>
+            <span type="button" class="option">Ans4</span>
+          </div>  
+          <!-- next button for next questions -->
+          <div class="next-button">
+            <!-- next buttons for every section -->
+            <button  type="button" id="next" class="btn">Next</button> 
+            <button  type="button" id="next2" class="btn">Next</button> 
+            <button  type="button" id="next3" class="btn">Next</button> 
+            <button  type="button" id="next4" class="btn">Next</button> 
+        
+        </div>
+    </div>  
+<!-- Quiz page Ends here -->
+
+<!-- Result page starts here -->
+<div class="result-box">
+    <h3>Quiz Result</h3>
+    <!-- awards icon addded here -->
+    <div class="icon"> 
+      <image src="awa.png" class="tu"></image>
+    </div>
+    <div class="name-result">   <span> xxx</span> Your Result is</div>
+    <div class="time-taken">  <span>0</span>Total time taken.</div>
+     <div class="attempts">    <b>Questions Attempt: </b><span> 10</span>  </div>
+     <div class="correct">    Correct Answers <span> 0</span> </div>
+     <div class="wrong">      Wrong Answer:  <span> 0</span> </div>
+     <div class="Percentage"> Percentage Obtained :<span> %</span> </div>
+     <div class="buttons">
+        <button type="button" class="restart">Go to Home</button>
+     </div>
+  </div>
+</div>
+<!-- Result page ends here -->
+<script src="probab.js"></script>
+<script src="question.js"></script>
+<script src="pipes&cisterns.js"></script>
+<script src="ages.js"></script>
+<script src="profit&loss.js"></script>
+</body>
+</html>
